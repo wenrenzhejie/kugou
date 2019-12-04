@@ -1,0 +1,20 @@
+.myNav>.ui-grid-c .ui-btn{
+    /*background-color: forestgreen;*/
+    font-size: 5px;
+}
+.ui-icon-tinggeshiqu:after {
+    background-image: url("../images/tinggeshiqu.png");
+    background-size: 18px 18px;
+}
+.ui-icon-saoyisao:after {
+    background-image: url("../images/saoyisao.png");
+    background-size: 18px 18px;
+}
+.ui-icon-tianjiahaoyou:after {
+    background-image: url("../images/tianjiahaoyou.png");
+    background-size: 18px 18px;
+}
+.ui-icon-erweima:after {
+    background-image: url("../images/erweima.png");
+    background-size: 18px 18px;
+}

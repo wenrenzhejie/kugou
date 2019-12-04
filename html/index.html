@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 引入 jQuery Mobile 样式 -->
+    <link rel="stylesheet" href="http://apps.bdimg.com/libs/jquerymobile/1.4.5/jquery.mobile-1.4.5.min.css">
+    <!-- 引入 jQuery 库 -->
+    <script src="http://apps.bdimg.com/libs/jquery/1.10.2/jquery.min.js"></script>
+    <!-- 引入 jQuery Mobile 库 -->
+    <script src="http://apps.bdimg.com/libs/jquerymobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <title>酷狗音乐</title>
+    <link rel="stylesheet" href="../css/index.css">
+    <script src="../js/index.js"></script>
+</head>
+<body>
+<div data-role="page" id="pageIndex">
+    <!--panel面板-->
+    <div data-role="panel" id="myPanel">
+        <ul data-role="listview" data-inset="false">
+            <li data-icon="plus">
+                    <a href="#" class="ui-btn ui-icon-mail ui-btn-icon-left">消息中心</a>
+            </li>
+        </ul>
+    </div>
+    <!--header-->
+    <div id="header" data-role="header">
+        <div class="ui-grid-d" style="text-align: center;background-color: deepskyblue">
+            <div class="ui-block-a" >
+                <a href="#myPanel" class="ui-btn ui-corner-all ui-icon-bars ui-btn-icon-notext ui-nodisc-icon ui-alt-icon">图标</a>
+            </div>
+            <div class="ui-block-b">
+                <!--<a href="#" class="ui-btn ui-corner-all ui-btn-b ui-btn-active">我</a>-->
+                <p style="color: white">我</p>
+            </div>
+            <div class="ui-block-c">
+<!--                <a href="#" class="ui-btn ui-corner-all">听</a>-->
+                <p style="color: white">听</p>
+            </div>
+            <div class="ui-block-d">
+<!--                <a href="#" class="ui-btn ui-corner-all">看</a>-->
+                <p style="color: white">看</p>
+            </div>
+            <div class="ui-block-e">
+                <a href="#myPopup" class="ui-btn ui-corner-all ui-icon-plus ui-btn-icon-notext ui-nodisc-icon ui-alt-icon" data-rel="popup" data-transition="fade"></a>
+                <div data-role="popup" id="myPopup" class="ui-content" data-arrow="t">
+                        <ul data-role="listview" data-inset="false">
+                            <li>
+                                <a href="#" class="ui-btn ui-btn-icon-left ui-btn-inline ui-icon-tinggeshiqu ui-nodisc-icon ui-alt-icon">听歌识曲</a>
+                            </li>
+                            <li>
+                                <a href="#" class="ui-btn ui-icon-saoyisao ui-btn-icon-left ui-nodisc-icon ui-alt-icon">扫一扫</a>
+                            </li>
+                            <li>
+                                <a href="#" class="ui-btn ui-icon-tianjiahaoyou ui-btn-icon-left ui-nodisc-icon ui-alt-icon">添加好友</a>
+                            </li> <li>
+                            <a href="#" class="ui-btn ui-icon-erweima ui-btn-icon-left ui-nodisc-icon ui-alt-icon">我的二维码</a>
+                        </li>
+
+                        </ul>
+                </div>
+            </div>
+        </div>
+        <!--搜索框-->
+        <input type="search" name="search" id="search" placeholder="搜索歌曲...">
+    </div>
+    <!--content-->
+    <div id="content" data-role="content">
+        <!--显示本地音乐、收藏、下载、最近播放-->
+        <div data-role="navbar" class="myNav1" style="padding: 15px">
+            <ul style="background-color: #f9f9f9">
+                <li>
+                    <div style="text-align: center">
+                        <img src="../images/localMusic.png">
+                        <span style="display: block;font-size: 12px;margin-top: 5px">本地音乐</span>
+                        <span style="display: block;font-size: 12px;margin-top: 5px">1</span>
+                    </div>
+                </li>
+                <li>
+                    <div style="text-align: center">
+                        <img src="../images/heart.png">
+                        <span style="display: block;font-size: 12px;margin-top: 5px">我的收藏</span>
+                        <span style="display: block;font-size: 12px;margin-top: 5px">82</span>
+                    </div>
+                </li>
+                <li>
+                    <div style="text-align: center">
+                        <img src="../images/download.png">
+                        <span style="display: block;font-size: 12px;margin-top: 5px">下载</span>
+                        <span style="display: block;font-size: 12px;margin-top: 5px">0</span>
+                    </div>
+                </li>
+                <li>
+                    <div style="text-align: center">
+                        <img src="../images/recentPlay.png">
+                        <span style="display: block;font-size: 12px;margin-top: 5px">最近播放</span>
+                        <span style="display: block;font-size: 12px;margin-top: 5px">166</span>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <!--音乐圈-->
+
+        <!--K歌圈-->
+    </div>
+</div>
+
+
+</body>
+</html>
