@@ -18,3 +18,61 @@
     background-image: url("../images/erweima.png");
     background-size: 18px 18px;
 }
+.ui-icon-shangjiantou:after {
+    background-image: url("../images/shangjiantou.png");
+    background-size: 18px 18px;
+}
+.ui-icon-xiajiantou:after {
+    background-image: url("../images/xiajiantou.png");
+    background-size: 18px 18px;
+}
+.ui-icon-xiaoxizhongxin:after {
+    background-image: url("../images/xiaoxizhongxin.png");
+    background-size: 18px 18px;
+}
+.ui-icon-pifuzhongxin:after {
+    background-image: url("../images/pifuzhongxin.png");
+    background-size: 18px 18px;
+}
+.ui-icon-huiyuanzhongxin:after {
+    background-image: url("../images/huiyuanzhongxin.png");
+    background-size: 18px 18px;
+}
+.ui-icon-liuliangbaoyue:after {
+    background-image: url("../images/liuliangbaoyue.png");
+    background-size: 18px 18px;
+}
+.ui-icon-sirenyunpan:after {
+    background-image: url("../images/sirenyunpan.png");
+    background-size: 18px 18px;
+}
+.ui-icon-dingshiguanbi:after {
+    background-image: url("../images/dingshiguanbi.png");
+    background-size: 18px 18px;
+}
+.ui-icon-kuisheyinxiao:after {
+    background-image: url("../images/kuisheyinxiao.png");
+    background-size: 18px 18px;
+}
+.ui-icon-lingshengcailing:after {
+    background-image: url("../images/lingshengcailing.png");
+    background-size: 18px 18px;
+}
+.ui-icon-kugoushengcheng:after {
+    background-image: url("../images/kugoushangcheng.png");
+    background-size: 18px 18px;
+}
+.ui-icon-jiashimoshi:after {
+    background-image: url("../images/jiashimoshi.png");
+    background-size: 18px 18px;
+}
+
+.header_nav{
+    font-weight: normal;
+    color: #ccc;
+}
+.header_nav:hover{
+    color: white;
+    text-shadow: 0px 0px 10px white;
+    font-weight: bolder;
+}

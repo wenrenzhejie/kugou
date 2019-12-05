@@ -17,29 +17,42 @@
 <div data-role="page" id="pageIndex">
     <!--panel面板-->
     <div data-role="panel" id="myPanel">
-        <ul data-role="listview" data-inset="false">
-            <li data-icon="plus">
-                    <a href="#" class="ui-btn ui-icon-mail ui-btn-icon-left">消息中心</a>
+        <ul data-role="listview" data-inset="false" style="margin:0;padding: 0;">
+            <li data-icon="plus" style="margin:0;padding: 0">
+                <div data-role="controlgroup" data-type="vertical">
+                    <a href="#" class="ui-btn ui-icon-xiaoxizhongxin ui-btn-icon-left ui-nodisc-icon ui-alt-icon"><span style="font-size: 15px;font-weight: normal">消息中心</span></a>
+                    <a href="#" class="ui-btn ui-icon-pifuzhongxin ui-btn-icon-left ui-nodisc-icon ui-alt-icon"><span style="font-size: 15px;font-weight: normal">皮肤中心</span></a>
+                    <a href="#" class="ui-btn ui-icon-huiyuanzhongxin ui-btn-icon-left ui-nodisc-icon ui-alt-icon"><span style="font-size: 15px;font-weight: normal">会员中心</span></a>
+                    <a href="#" class="ui-btn ui-icon-liuliangbaoyue ui-btn-icon-left ui-nodisc-icon ui-alt-icon"><span style="font-size: 15px;font-weight: normal">流量包月</span></a>
+                    <a href="#" class="ui-btn ui-icon-sirenyunpan ui-btn-icon-left ui-nodisc-icon ui-alt-icon"><span style="font-size: 15px;font-weight: normal">私人云盘</span></a>
+                </div >
+                <div data-role="controlgroup" data-type="vertical">
+                    <a href="#" class="ui-btn ui-icon-dingshiguanbi ui-btn-icon-left ui-nodisc-icon ui-alt-icon"><span style="font-size: 15px;font-weight: normal">定时关闭</span></a>
+                    <a href="#" class="ui-btn ui-icon-kuisheyinxiao ui-btn-icon-left ui-nodisc-icon ui-alt-icon"><span style="font-size: 15px;font-weight: normal">蝰蛇音效</span></a>
+                    <a href="#" class="ui-btn ui-icon-lingshengcailing ui-btn-icon-left ui-nodisc-icon ui-alt-icon"><span style="font-size: 15px;font-weight: normal">铃声彩铃</span></a>
+                    <a href="#" class="ui-btn ui-icon-kugoushengcheng ui-btn-icon-left ui-nodisc-icon ui-alt-icon"><span style="font-size: 15px;font-weight: normal">酷狗商城</span></a><a href="#" class="ui-btn ui-icon-jiashimoshi ui-btn-icon-left ui-nodisc-icon ui-alt-icon"><span style="font-size: 15px;font-weight: normal">驾驶模式</span></a>
+
+                </div >
             </li>
         </ul>
     </div>
     <!--header-->
     <div id="header" data-role="header">
-        <div class="ui-grid-d" style="text-align: center;background-color: deepskyblue">
+        <div class="ui-grid-d" style="text-align: center;background-color: #0291ff">
             <div class="ui-block-a" >
                 <a href="#myPanel" class="ui-btn ui-corner-all ui-icon-bars ui-btn-icon-notext ui-nodisc-icon ui-alt-icon">图标</a>
             </div>
             <div class="ui-block-b">
                 <!--<a href="#" class="ui-btn ui-corner-all ui-btn-b ui-btn-active">我</a>-->
-                <p style="color: white">我</p>
+                <p class="header_nav">我</p>
             </div>
             <div class="ui-block-c">
 <!--                <a href="#" class="ui-btn ui-corner-all">听</a>-->
-                <p style="color: white">听</p>
+                <p class="header_nav">听</p>
             </div>
             <div class="ui-block-d">
 <!--                <a href="#" class="ui-btn ui-corner-all">看</a>-->
-                <p style="color: white">看</p>
+                <p class="header_nav">看</p>
             </div>
             <div class="ui-block-e">
                 <a href="#myPopup" class="ui-btn ui-corner-all ui-icon-plus ui-btn-icon-notext ui-nodisc-icon ui-alt-icon" data-rel="popup" data-transition="fade"></a>
@@ -67,7 +80,7 @@
     <!--content-->
     <div id="content" data-role="content">
         <!--显示本地音乐、收藏、下载、最近播放-->
-        <div data-role="navbar" class="myNav1" style="padding: 15px">
+        <div data-role="navbar" class="myNav1">
             <ul style="background-color: #f9f9f9">
                 <li>
                     <div style="text-align: center">
@@ -99,9 +112,37 @@
                 </li>
             </ul>
         </div>
-        <!--音乐圈-->
-
-        <!--K歌圈-->
+        <!--音乐圈、K歌圈、自建歌单-->
+        <ul data-role="listview">
+            <li><a href="#" style=" height:15px;background-color: #f9f9f9;font-weight: lighter;font-size: 15px" class="ui-alt-icon ui-nodisc-icon ui-mini">音乐圈</a></li>
+            <li><a href="#" style="background-color: #f9f9f9;font-weight: lighter;font-size: 15px" class="ui-alt-icon ui-nodisc-icon ui-mini">K歌圈</a></li>
+            <li><a href="#" style="background-color: #f9f9f9;font-weight: lighter;font-size: 15px" class="ui-alt-icon ui-nodisc-icon ui-mini">推广</a></li>
+            <li style="padding: 0;background-color: #f9f9f9">
+                <div data-role="collapsible" style="width: 100%;margin: 0;padding:0;background-color: #f9f9f9;font-weight: lighter;font-size: 15px" data-inset="false" data-iconpos="right" data-collapsed-icon="shangjiantou" data-expanded-icon="xiajiantou" class="ui-nodisc-icon ui-mini">
+                    <h6 style="margin: 0;padding: 0;"><span style="font-weight: lighter;font-size: 15px">自建歌单</span></h6>
+                    <ul data-role="listview">
+                        <li>
+                            <div style="background-color: #ff938d ;width: 40px;height: 40px;position: relative">
+                                <img src="../images/mylike.png" width="20px" height="20px"style="position: absolute;left: 10px;top: 10px">
+                                <div style="position: absolute;top: 0;left: 50px;">
+                                    <span style="font-size: 10px;font-weight: bolder">我喜欢</span><br>
+                                    <span style="font-size: 10px;font-weight: bolder">82首</span>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div style="background-color: #98d1ff;width: 40px;height: 40px;position: relative">
+                                <img src="../images/morenshoucang.png" width="20px" height="20px"style="position: absolute;left: 10px;top: 10px">
+                                <div style="position: absolute;top: 0;left: 50px;">
+                                    <span style="font-size: 10px;font-weight: bolder">默认收藏</span><br>
+                                    <span style="font-size: 10px;font-weight: bolder">0首</span>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
     </div>
 </div>
 
