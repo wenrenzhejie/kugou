@@ -10,6 +10,10 @@ $(document).on("pagecreate","#pageIndex",function(){
     $(".index_nav_look").on("tap",function(){
         $.mobile.changePage("look.html","slideup");
     });
+    $("#song").on("tap",function () {
+        console.log("aaaaa");
+        $.mobile.changePage("song.html","slideup");
+    })
 });
 $(document).on("pagecreate","#pageListen",function(){
     lunbotu();
@@ -29,6 +33,19 @@ $(document).on("pagecreate","#pageListen",function(){
         }
 
     }
+    $(".index_nav_me").on("tap",function(){
+        console.log("index");
+        $.mobile.changePage("index.html","slideup");
+    });
+    $(".index_nav_listen").on("tap",function(){
+        console.log("listen");
+        $.mobile.changePage("listen.html","slideup");
+    });
+    $(".index_nav_look").on("tap",function(){
+        $.mobile.changePage("look.html","slideup");
+    });
+});
+$(document).on("pagecreate","#pageLook",function(){
     $(".index_nav_me").on("tap",function(){
         console.log("index");
         $.mobile.changePage("index.html","slideup");

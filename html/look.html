@@ -2,9 +2,123 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 引入 jQuery Mobile 样式 -->
+    <link rel="stylesheet" href="http://apps.bdimg.com/libs/jquerymobile/1.4.5/jquery.mobile-1.4.5.min.css">
+    <!-- 引入 jQuery 库 -->
+    <script src="http://apps.bdimg.com/libs/jquery/1.10.2/jquery.min.js"></script>
+    <!-- 引入 jQuery Mobile 库 -->
+    <script src="http://apps.bdimg.com/libs/jquerymobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
     <title>酷狗</title>
+    <link rel="stylesheet" href="../css/index.css">
+    <script src="../js/index.js"></script>
 </head>
 <body>
+<div data-role="page" id="pageLook">
+    <!--panel面板-->
+    <div data-role="panel" id="myPanel" data-display="push" style="background-color: #f9f9f9;padding: 0" data-theme="none">
+        <ul data-role="listview" data-inset="false" style="margin:0;padding: 0;">
+            <li data-icon="plus" style="margin:0;padding: 0;background-color: #f9f9f9">
+                <div data-role="controlgroup" data-type="vertical" style="background-color: yellow">
+                    <a href="#" class="ui-btn ui-icon-xiaoxizhongxin ui-btn-icon-left ui-nodisc-icon ui-alt-icon"><span style="font-size: 15px;font-weight: normal">消息中心</span></a>
+                    <a href="#" class="ui-btn ui-icon-pifuzhongxin ui-btn-icon-left ui-nodisc-icon ui-alt-icon"><span style="font-size: 15px;font-weight: normal">皮肤中心</span></a>
+                    <a href="#" class="ui-btn ui-icon-huiyuanzhongxin ui-btn-icon-left ui-nodisc-icon ui-alt-icon"><span style="font-size: 15px;font-weight: normal">会员中心</span></a>
+                    <a href="#" class="ui-btn ui-icon-liuliangbaoyue ui-btn-icon-left ui-nodisc-icon ui-alt-icon"><span style="font-size: 15px;font-weight: normal">流量包月</span></a>
+                    <a href="#" class="ui-btn ui-icon-sirenyunpan ui-btn-icon-left ui-nodisc-icon ui-alt-icon"><span style="font-size: 15px;font-weight: normal">私人云盘</span></a>
+                </div >
+                <div data-role="controlgroup" data-type="vertical">
+                    <a href="#" class="ui-btn ui-icon-dingshiguanbi ui-btn-icon-left ui-nodisc-icon ui-alt-icon"><span style="font-size: 15px;font-weight: normal">定时关闭</span></a>
+                    <a href="#" class="ui-btn ui-icon-kuisheyinxiao ui-btn-icon-left ui-nodisc-icon ui-alt-icon"><span style="font-size: 15px;font-weight: normal">蝰蛇音效</span></a>
+                    <a href="#" class="ui-btn ui-icon-lingshengcailing ui-btn-icon-left ui-nodisc-icon ui-alt-icon"><span style="font-size: 15px;font-weight: normal">铃声彩铃</span></a>
+                    <a href="#" class="ui-btn ui-icon-kugoushengcheng ui-btn-icon-left ui-nodisc-icon ui-alt-icon"><span style="font-size: 15px;font-weight: normal">酷狗商城</span></a><a href="#" class="ui-btn ui-icon-jiashimoshi ui-btn-icon-left ui-nodisc-icon ui-alt-icon"><span style="font-size: 15px;font-weight: normal">驾驶模式</span></a>
 
+                </div >
+            </li>
+        </ul>
+    </div>
+    <!--header-->
+    <div id="header" data-role="header">
+        <div class="ui-grid-d" style="text-align: center;background-color: #0291ff">
+            <div class="ui-block-a" >
+                <a href="#myPanel" class="ui-btn ui-corner-all ui-icon-bars ui-btn-icon-notext ui-nodisc-icon ui-alt-icon">图标</a>
+            </div>
+            <div class="ui-block-b">
+                <!--<a href="#" class="ui-btn ui-corner-all ui-btn-b ui-btn-active">我</a>-->
+                <p class="header_nav index_nav_me">我</p>
+            </div>
+            <div class="ui-block-c">
+                <!--                <a href="#" class="ui-btn ui-corner-all">听</a>-->
+                <p class="header_nav index_nav_listen">听</p>
+            </div>
+            <div class="ui-block-d">
+                <!--                <a href="#" class="ui-btn ui-corner-all">看</a>-->
+                <p class="header_nav index_nav_look" style="color: white">看</p>
+            </div>
+            <div class="ui-block-e">
+                <a href="#myPopup2" class="ui-btn ui-corner-all ui-icon-plus ui-btn-icon-notext ui-nodisc-icon ui-alt-icon" data-rel="popup" data-transition="fade"></a>
+                <div data-role="popup" id="myPopup2" class="ui-content" data-arrow="t">
+                    <ul data-role="listview" data-inset="false">
+                        <li>
+                            <a href="#" class="ui-btn ui-btn-icon-left ui-btn-inline ui-icon-tinggeshiqu ui-nodisc-icon ui-alt-icon">听歌识曲</a>
+                        </li>
+                        <li>
+                            <a href="#" class="ui-btn ui-icon-saoyisao ui-btn-icon-left ui-nodisc-icon ui-alt-icon">扫一扫</a>
+                        </li>
+                        <li>
+                            <a href="#" class="ui-btn ui-icon-tianjiahaoyou ui-btn-icon-left ui-nodisc-icon ui-alt-icon">添加好友</a>
+                        </li> <li>
+                        <a href="#" class="ui-btn ui-icon-erweima ui-btn-icon-left ui-nodisc-icon ui-alt-icon">我的二维码</a>
+                    </li>
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!--搜索框-->
+        <input type="search" name="search" id="search" placeholder="搜索歌曲..." class="ui-corner-all">
+    </div>
+    <!--content-->
+    <div data-role="content">
+       <div class="ui-grid-d" data-inline="true" style="text-align: center">
+            <div class="ui-block-a">
+                <a href="#" class="ui-btn ui-icon-user ui-btn-icon-notext ui-corner-all" style="display: inline-block"></a>
+            </div>
+           <div class="ui-block-b" style="height: 50px;line-height:50px ">
+               关注
+           </div>
+           <div class="ui-block-c" style="text-align: center;line-height: 50px">
+               推荐
+           </div>
+           <div class="ui-block-d" style="text-align: center;line-height: 50px">
+               附近
+           </div>
+           <div class="ui-block-e" style="text-align: center;line-height: 50px">
+               <img src="../images/bang.png" style="width: 22px;height: 22px">
+           </div>
+       </div>
+        <div class="ui-grid-a">
+            <div class="ui-block-a" style="margin-bottom: 20px">
+                <video src="../videos/林俊杰%20-%20将故事写成我们.mkv" controls width="100%" height="100px" poster="../images/jianggushixiechengwomen.jpg"></video>
+                <p style="margin: 0;padding: 0;font-size: 12px;text-align: center">林俊杰-将故事写成我们</p>
+            </div>
+            <div class="ui-block-b">
+                <video src="../videos/张敬轩%20-%20只是太爱你.mkv" controls width="100%" height="100px" poster="../images/zhishitaiaini.jpg"></video>
+                <p style="margin: 0;padding: 0;font-size: 12px;text-align: center">张敬轩-只是太爱你</p>
+            </div>
+        </div>
+        <div class="ui-grid-a">
+            <div class="ui-block-a">
+                <video src="../videos/毛不易%20-%20盛夏%20(Live).mkv" controls width="100%" height="100px" poster="../images/shengxia.jpg"></video>
+                <p style="margin: 0;padding: 0;font-size: 12px;text-align: center">毛不易-盛夏</p>
+            </div>
+            <div class="ui-block-b">
+                <video src="../videos/周杰伦%20-%20断了的弦.mkv" controls width="100%" height="100px" poster="../images/duanledexian.jpg"></video>
+                <p style="margin: 0;padding: 0;font-size: 12px;text-align: center">周杰伦-断了的弦</p>
+            </div>
+        </div>
+    </div>
+    <!--footer-->
+
+</div>
 </body>
 </html>
