@@ -1,26 +1,33 @@
 $(document).on("pagecreate","#pageIndex",function(){
-    $(".index_nav_me").on("tap",function(){
+    /*$(".index_nav_me").on("tap",function(){
         console.log("index");
         $.mobile.changePage("index.html","slideup");
-    });
-    $(".index_nav_listen").on("tap",function(){
+    });*/
+    $(".nav_me_listen").on("tap",function(){
         console.log("listen");
         $.mobile.changePage("listen.html","slideup");
     });
-    $(".index_nav_look").on("tap",function(){
+    $(".nav_me_look").on("tap",function(){
         $.mobile.changePage("look.html","slideup");
     });
     $("#song").on("tap",function () {
         console.log("aaaaa");
         $.mobile.changePage("song.html","slideup");
-    })
+    });
+
+    $.event.special.swipe.horizontalDistanceThreshold = 5;
+    $("#pageIndex").on("swipeleft",function(){
+        $.mobile.changePage("listen.html","slide");
+    });
+
 });
 $(document).on("pagecreate","#pageListen",function(){
+    console.log("aaaaaaaaaaaaaaaaa");
+    let temp = null;
     lunbotu();
     function lunbotu(){
         console.log("Jinlaile");
         let imageArray = ["../images/1.jpg","../images/2.jpg","../images/3.jpg","../images/4.jpg","../images/5.jpg"];
-        let temp;
         if (temp == null){
             temp = setInterval(fn,3000);
         }
@@ -33,28 +40,45 @@ $(document).on("pagecreate","#pageListen",function(){
         }
 
     }
-    $(".index_nav_me").on("tap",function(){
+    $(".listen-nav-me").on("tap",function(){
         console.log("index");
         $.mobile.changePage("index.html","slideup");
     });
-    $(".index_nav_listen").on("tap",function(){
+    /*$(".listen-nav-listen").on("tap",function(){
         console.log("listen");
         $.mobile.changePage("listen.html","slideup");
-    });
-    $(".index_nav_look").on("tap",function(){
+    });*/
+    $(".listen-nav-look").on("tap",function(){
         $.mobile.changePage("look.html","slideup");
+    });
+    $(document).on("pagebeforehide","#pageListen",function(){
+        console.log("pagebeforeHide");
+        console.log(temp);
+        clearInterval(temp);
+        temp = null;
+    });
+    $.event.special.swipe.horizontalDistanceThreshold = 5;
+    $("#pageListen").on("swipeleft",function(){
+        $.mobile.changePage("look.html","slide");
+    });
+    $("#pageListen").on("swiperight",function(){
+        $.mobile.changePage("index.html","slide");
     });
 });
 $(document).on("pagecreate","#pageLook",function(){
-    $(".index_nav_me").on("tap",function(){
+    $(".look_nav_me").on("tap",function(){
         console.log("index");
         $.mobile.changePage("index.html","slideup");
     });
-    $(".index_nav_listen").on("tap",function(){
+    $(".look_nav_listen").on("tap",function(){
         console.log("listen");
         $.mobile.changePage("listen.html","slideup");
     });
-    $(".index_nav_look").on("tap",function(){
-        $.mobile.changePage("look.html","slideup");
+    $.event.special.swipe.horizontalDistanceThreshold = 5;
+    $("#pageLook").on("swiperight",function(){
+        $.mobile.changePage("listen.html","slide");
     });
+    /*$(".look_nav_look").on("tap",function(){
+        $.mobile.changePage("look.html","slideup");
+    });*/
 });
